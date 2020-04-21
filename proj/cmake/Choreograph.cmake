@@ -1,4 +1,4 @@
-if(NOT TARGET Cinder-Notifications)
+if(NOT TARGET Choreograph)
     # Define ${Choreograph_PROJECT_ROOT}. ${CMAKE_CURRENT_LIST_DIR} is just the current directory.
     get_filename_component(Choreograph_PROJECT_ROOT "${CMAKE_CURRENT_LIST_DIR}/../.." ABSOLUTE)
 
@@ -26,7 +26,7 @@ if(NOT TARGET Cinder-Notifications)
     # If your Cinder block has no source code but instead pre-build libraries,
     # you can specify all of them here (uncomment the below line and adjust to your needs).
     # Make sure to use the libraries for the right platform.
-    # # target_link_libraries(Cinder-Notifications "${Cinder-OpenCV_PROJECT_ROOT}/lib/libopencv_core.a")
+    # # target_link_libraries(Choreograph "${Cinder-OpenCV_PROJECT_ROOT}/lib/libopencv_core.a")
 
     if(NOT TARGET cinder)
         include("${CINDER_PATH}/proj/cmake/configure.cmake")
