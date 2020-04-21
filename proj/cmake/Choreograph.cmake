@@ -7,7 +7,9 @@ if(NOT TARGET Choreograph)
 
     # Make a list of source files and define that to be ${SOURCE_LIST}.
     file(GLOB SOURCE_LIST CONFIGURE_DEPENDS
-            "${Choreograph_PROJECT_ROOT}/src/choreograph/*.cpp"
+            "${Choreograph_PROJECT_ROOT}/src/choreograph/Cue.cpp"
+            "${Choreograph_PROJECT_ROOT}/src/choreograph/Timeline.cpp"
+            "${Choreograph_PROJECT_ROOT}/src/choreograph/TimelineItem.cpp"
             )
 
     # Create the library!
@@ -16,11 +18,7 @@ if(NOT TARGET Choreograph)
     # Add include directories.
     # Notice that `cinderblock.xml` has `<includePath>src</includePath>`.
     # So you need to set `../../src/` to include.
-    target_include_directories(Choreograph PUBLIC
-            "${Choreograph_PROJECT_ROOT}/src"
-            "${CMAKE_CURRENT_LIST_DIR}/../../include"
-            )
-
+    target_include_directories(Choreograph PUBLIC "${Choreograph_PROJECT_ROOT}/src")
     target_include_directories(Choreograph SYSTEM BEFORE PUBLIC "${CINDER_PATH}/include" )
 
     # If your Cinder block has no source code but instead pre-build libraries,
