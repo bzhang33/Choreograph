@@ -1,6 +1,6 @@
 if(NOT TARGET Choreograph)
     # Define ${Choreograph_PROJECT_ROOT}. ${CMAKE_CURRENT_LIST_DIR} is just the current directory.
-    get_filename_component(Choreograph_PROJECT_ROOT "/Users/bzhang/Downloads/cinder_0.9.2_mac/blocks/Choreograph/src/choreograph" ABSOLUTE)
+    get_filename_component(Choreograph_PROJECT_ROOT "/Users/bzhang/Downloads/cinder_0.9.2_mac/blocks/Choreograph" ABSOLUTE)
 
     # Define ${CINDER_PATH} as usual.
     get_filename_component(CINDER_PATH "/Users/bzhang/Downloads/cinder_0.9.2_mac" ABSOLUTE)
