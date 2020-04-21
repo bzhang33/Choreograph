@@ -1,15 +1,15 @@
 if(NOT TARGET Choreograph)
     # Define ${Choreograph_PROJECT_ROOT}. ${CMAKE_CURRENT_LIST_DIR} is just the current directory.
-    get_filename_component(Choreograph_PROJECT_ROOT "${CMAKE_CURRENT_LIST_DIR}/../.." ABSOLUTE)
+    get_filename_component(Choreograph_PROJECT_ROOT "/Users/bzhang/Downloads/cinder_0.9.2_mac/blocks/Choreograph/src/choreograph" ABSOLUTE)
 
     # Define ${CINDER_PATH} as usual.
-    get_filename_component(CINDER_PATH "${Choreograph_PROJECT_ROOT}/../.." ABSOLUTE)
+    get_filename_component(CINDER_PATH "/Users/bzhang/Downloads/cinder_0.9.2_mac" ABSOLUTE)
 
     # Make a list of source files and define that to be ${SOURCE_LIST}.
     file(GLOB SOURCE_LIST CONFIGURE_DEPENDS
-            "${Choreograph_PROJECT_ROOT}/src/choreograph/Cue.cpp"
-            "${Choreograph_PROJECT_ROOT}/src/choreograph/Timeline.cpp"
-            "${Choreograph_PROJECT_ROOT}/src/choreograph/TimelineItem.cpp"
+            "${Choreograph_PROJECT_ROOT}/src/choreograph/*.h"
+            "${Choreograph_PROJECT_ROOT}/src/choreograph/*.hpp"
+            "${Choreograph_PROJECT_ROOT}/src/choreograph/*.cpp"
             )
 
     # Create the library!
